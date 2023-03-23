@@ -1,0 +1,193 @@
+#REQUIRE VER 4.0.0.100
+#REQUIRE SD
+
+ROT=0xFF0000
+GRUEN=0x00CC00
+BLAU=0x1034A6
+GELB=0xFDE100
+WEISS=0xFFFFFF
+SCHWARZ=0x1B1B1B
+ORANGE=0xFFA500
+BECKY=0x663399
+BRAUN=0xCC9966
+PINK=0xFF1493
+NAVAJO=0xFFDEAD
+SILBER=0xC0C0C0
+
+p=print
+pl=println
+pe={pause() exit()}
+fse=fsexists
+col=color
+wait= {t=timer()while(timer()<(t+tw)){p()}}
+
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+pl()
+col(GELB)
+pl("     #####                                  ######")
+pl("    #     # #    # # #####  ####  #    #    #     # #####   ####   ####")
+pl("    #       #    # #   #   #    # #    #    #     # #    # #    # #")
+pl("     #####  #    # #   #   #      ######    ######  #    # #    #  ####")
+pl("          # # ## # #   #   #      #    #    #     # #####  #    #      #")
+pl("    #     # ##  ## #   #   #    # #    #    #     # #   #  #    # #    #  ##")
+pl("     #####  #    # #   #    ####  #    #    ######  #    #  ####   ####   ##")
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+pl()
+pl()
+col(GELB)
+pl("                  ***** C U S T O M - T H E H E P A C K *****")
+pl()
+pl()
+pl("     Installiere dein eigenes ThemePack!")
+pl()
+pl()
+pl("     Alternative Navigation (ohne JoyCons):")
+pl()
+pl()
+col(SILBER)p("       * ")col(BECKY)p("Vol +/-      : hoch/runter navigieren")pl()
+col(SILBER)p("       * ")col(BECKY)p("Power Button : Bestaetigen (A-Taste)")pl()
+pl()
+pl()
+pl()
+col(GRUEN)
+pl("  Drueck die A-Taste/Power, um deine persoenlichen Themes zu installieren!")
+pl()
+pl()
+col(ROT)
+pl("  Druecke zum Abbrechen eine beliebige Taste.")
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+col(SCHWARZ)
+
+result = pause()
+if (!(result.a || result.power)) {
+  exit()
+}
+clear()
+
+pl()
+col(SILBER)
+pl("   ################################### # ###################################   ")
+pl("  #                                                                         #  ")
+pl(" #                 DIESE SOFTWARE DARF NICHT VERKAUFT WERDEN,                # ")
+pl(" #                                                                           # ")
+pl(" #                  WEDER EINZELN NOCH ALS TEIL EINES PAKETS.                # ")
+pl(" #                                                                           # ")
+pl(" #                                                                           # ")
+pl(" #        WENN DU FUER DIESE SOFTWARE BEZAHLT HAST, ODER SIE ALS TEIL        # ")
+pl(" #                                                                           # ")
+pl(" #       EINES PAKETS MIT FOLGEKOSTEN ERHALTEN HAST, BIST DU BETROGEN        # ")
+pl(" #                                                                           # ")
+pl(" #            WORDEN UND SOLLTEST SOFORT DEIN GELD ZURUECKFORDERN.           # ")
+pl(" #                                                                           # ")
+pl(" #                                                                           # ")
+pl(" #                   Weitere Einzelheiten findest du auf:                    # ")
+pl(" #                       https://discord.gg/switchbros                       # ")
+pl("  #                                                                         #  ")
+pl("   ################################### # ###################################   ")
+pl()
+pl()
+wait(tw = 5000)
+pl("                           Druecke A um fortzufahren")
+pause()
+
+clear()
+
+  pl()
+	col(NAVAJO)
+	pl("########### ########### ########## ### # ### ########## ########### ###########")
+	pl()
+	pl()
+	col(GELB)
+	pl("                   Dein eigenes ThemePack wird nun installiert!")
+	pl()
+	pl()
+	pl()
+	pl(" Wir haben eben die neueste Version vom SB-Updater entwickelt.") 
+	pl()
+	pl(" Es dauert laenger, aber es ist ein Erlebnis fuer sich.")
+	pl()
+	pl()
+	col(NAVAJO)
+	pl("########### ########### ########## ### # ### ########## ########### ###########")
+	pl()
+	col(SCHWARZ)
+	copydir("sd:/Custom-ThemePack/atmosphere", "sd:/")
+	copydir("sd:/Custom-ThemePack/bootloader", "sd:/")
+	copydir("sd:/Custom-ThemePack/config", "sd:/")
+	copydir("sd:/Custom-ThemePack/switch", "sd:/")
+
+clear()
+
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+pl()
+pl()
+col(ROT)
+pl("                      Behebe Attribute (fix archive bit)")
+pl()
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+pl()
+pl()
+pl()
+p("                    Bitte warten") wait(tw = 500) p(".") wait(tw = 500) p(".") wait(tw = 500) p(".") wait(tw = 1000) p("     es dauert einen Moment")
+
+wait(tw = 3000)
+clear()
+
+col(SCHWARZ)
+fixattrib()
+pl()
+pl()
+pl()
+col(GRUEN)
+pl("                 Druecke eine beliebige Taste um fortzufahren!")
+pause()
+
+clear()
+
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+pl()
+col(GELB)
+pl("     #####                                  ######")
+pl("    #     # #    # # #####  ####  #    #    #     # #####   ####   ####")
+pl("    #       #    # #   #   #    # #    #    #     # #    # #    # #")
+pl("     #####  #    # #   #   #      ######    ######  #    # #    #  ####")
+pl("          # # ## # #   #   #      #    #    #     # #####  #    #      #")
+pl("    #     # ##  ## #   #   #    # #    #    #     # #   #  #    # #    #  ##")
+pl("     #####  #    # #   #    ####  #    #    ######  #    #  ####   ####   ##")
+pl()
+col(NAVAJO)
+pl("########### ########### ########## ### # ### ########## ########### ###########")
+pl()
+pl()
+pl()
+col(GRUEN)
+pl("               Deine Custom Themes wurden erfolgreich installiert!")
+pl()
+pl()
+pl("                      Alle Schritte wurden abgeschlossen!")
+pl()
+pl("               Deine Switch wird in 5 Sek. automatisch neu gestartet.")
+pl()
+pl()
+pl()
+wait(tw = 3000)
+col(BECKY) p("                        5...") wait(tw = 1000) col(BLAU) p("  4...") wait(tw = 1000) col(ROT) p("  3...") wait(tw = 1000) col(ORANGE) p("  2...") wait(tw = 1000) col(GELB) p("  1...") wait(tw = 1000) col(WEISS) p("  0") wait(tw = 1000)
+
+col(SCHWARZ)
+if (is_erista()) {
+	payload("sd:/bootloader/update.bin")
+}.else(){
+	reboot_ofw()
+}
